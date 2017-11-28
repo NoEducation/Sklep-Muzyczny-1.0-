@@ -1,0 +1,13 @@
+﻿@model List<SklepMuzyczny.Models.Category>
+
+<nav>
+    <div class="navigation-bar-horizontal">
+        <div class="btn-group btn-group-justified">
+            <a  class="btn btn-primary" href="@Url.Action("SongsByCategory","Song",new { categoryName = SklepMuzyczny.Const.ConstValues.AllSongs })">Wszystkie kategorie</a>
+           @foreach (var category in Model)
+            {
+                <a class="btn btn-primary" href="@Url.Action("SongsByCategory","Song", new { categoryName = category.NameCategory})">@category.NameCategory</a>
+            }
+        </div>
+    </div>
+</nav>

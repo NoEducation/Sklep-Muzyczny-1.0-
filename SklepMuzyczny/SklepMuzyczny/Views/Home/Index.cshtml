@@ -1,0 +1,45 @@
+﻿@model SklepMuzyczny.ViewModels.IndexHomeViewModel
+@using SklepMuzyczny.Helpers
+@{
+    ViewBag.Title = "Strona Domowa";
+}
+
+
+
+@Html.Action("MenuHorizontal","Home")
+
+<div class="music-offer">
+    <h2 id="newest-music-headline"> Nowośći - nowe produkty w sklepie</h2>
+    <div class="music-offer">
+        @foreach (var song in Model.Newest)
+        {
+            <div class="picture-details">
+                <div class="picture-place">
+                    <a href="@Url.Action("SongDetails","Song",new { songId = song.SongId})"><img src="@Url.ImagePathGenerator(song.NameFilePicture)" /></a>
+                </div>
+                <h4>@song.NameSong</h4>
+                <p>@song.Author</p>
+                <p>@song.Price zł</p>
+
+            </div>
+        }
+    </div>
+</div>
+
+<div class="music-offer">
+    <h2 id="bestsellers-music-headline">TOP - najczęściej kupowane</h2>
+    <div class="music-offer">
+        @foreach (var song in Model.Bestsellers)
+        {
+            <div class="picture-details">
+                <div class="picture-place">
+                    <a href="@Url.Action("SongDetails","Song",new { songId = song.SongId})"><img src="@Url.ImagePathGenerator(song.NameFilePicture)" /></a>
+                </div>
+                <h4>@song.NameSong</h4>
+                <p>@song.Author</p>
+                <p>@song.Price zł</p>
+
+            </div>
+        }
+        </div>
+</div>

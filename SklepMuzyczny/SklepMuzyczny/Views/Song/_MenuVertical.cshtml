@@ -1,0 +1,16 @@
+﻿@model List<SklepMuzyczny.Models.Category>
+
+
+<div class="col-lg-3 col-md-3 well">
+    <div class="">
+        <a class="btn btn-block @(ViewBag.ChoosenCategory == SklepMuzyczny.Const.ConstValues.AllSongs 
+             ? "btn-info" :"btn-default")"href="@Url.Action("SongsByCategory","Song",
+             new { categoryName = SklepMuzyczny.Const.ConstValues.AllSongs })">Wszystkie Piosenki</a>
+
+        @foreach (var category in Model)
+        {
+            <a class="btn btn-block @(ViewBag.ChoosenCategory != category.NameCategory ? "btn-default" : "btn-info")"
+               href="@Url.Action("SongsByCategory","Song", new { categoryName = category.NameCategory})">@category.NameCategory</a>
+        }
+    </div>
+</div>

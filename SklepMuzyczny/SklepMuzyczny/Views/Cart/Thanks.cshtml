@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Potwierdzenie";
+}
+
+<h2 class="text-center">Dziekujemy za skorzystanie z naszego sklepu</h2>
+<h3 class="text-center">Zamówie zostało przyjete do realizacji</h3>
+<div class="btn-group btn-group-justified btn-cart">
+    @Html.ActionLink("Strona Główna", "Index", "Home", null, new { @class = "btn btn-default" })
+    @Html.ActionLink("O autorze", "StaticSites", "Home", new { id = "AboutMe" }, new { @class = "btn btn-primary " })
+    @Html.ActionLink("Kontakt", "StaticSites", "Home", new { id = "AboutMe" }, new { @class = "btn btn-default " })
+</div>
+

@@ -1,0 +1,109 @@
+﻿@model SklepMuzyczny.ViewModels.PaymetCartViewModel
+@{
+    ViewBag.Title = "Składa nie zamówienia";
+}
+
+<div class="payment-main">
+    <h2 class="text-center text-success">Składanie zamówienia</h2>
+            <div class="row">
+           @using (Html.BeginForm("Payment", "Cart"))
+            {
+                    <div class="-left col-lg-7 col-md-7">
+
+                        @Html.AntiForgeryToken()
+
+                        <div id="login-error">
+                            
+                            @Html.ValidationSummary()
+                        </div>
+                        <div class="form-group form-group-lg ">
+                            @Html.LabelFor(x => x.Orders.Name)
+                            @Html.TextBoxFor(x => x.Orders.Name, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Orders.Name)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Orders.Surname)
+                            @Html.TextBoxFor(x => x.Orders.Surname, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Orders.Surname)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Orders.Country)
+                            @Html.TextBoxFor(x => x.Orders.Country, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Orders.Country)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Orders.State)
+                            @Html.TextBoxFor(x => x.Orders.State, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Orders.State)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Orders.City)
+                            @Html.TextBoxFor(x => x.Orders.City, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Orders.City)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Orders.AdressLine)
+                            @Html.TextBoxFor(x => x.Orders.AdressLine, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Orders.AdressLine)
+                        </div>
+                       
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Orders.Zip)
+                            @Html.TextBoxFor(x => x.Orders.Zip, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Orders.Zip)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Orders.Phone)
+                            @Html.TextBoxFor(x => x.Orders.Phone, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Orders.Phone)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Orders.Email)
+                            @Html.TextBoxFor(x => x.Orders.Email, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Orders.Email)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Orders.Comment)
+                            @Html.TextAreaFor(x => x.Orders.Comment, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Orders.Comment)
+                        </div>
+                        <div style="float:right">
+                        </div>
+                        <div class="form-group" style="float:right">
+                            <input type="submit" value="Złóz zamówienie" class="btn btn-success btn-lg btn-block btn-cart" />
+                        </div>
+                        <div style="clear:both"></div>
+
+                    </div>
+
+                    <div class="col-lg-5 col-md-5">
+                        <div class="order-panel panel panel-success">
+                            <div class="panel-heading"><h4>Twoje zamówienie</h4></div>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="info">
+                                        <th>Nazwa</th>
+                                        <th>Wartość</th>
+                                        <th>Ilość</th>
+                                    </tr>
+                                </thead>
+                                @foreach (var item in Model.SongsOrdered)
+                                {
+                                    <tr>
+                                        <td>@item.Song.NameSong</td>
+                                        <td>@item.Song.Price zł</td>
+                                        <td>@item.Quantity</td>
+                                    </tr>
+                                }
+                            </table>
+                        </div>
+                        <div class="panel-footer">
+                            <h4>Całkowita ilośc piosenek @Model.TotalQuantityItems</h4>
+                            <h4>Do zapłaty @Model.TotalValue zł</h4>
+                        </div>
+                    </div>
+            }
+        </div>
+</div>

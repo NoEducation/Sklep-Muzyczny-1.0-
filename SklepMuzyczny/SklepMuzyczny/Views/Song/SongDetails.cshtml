@@ -1,0 +1,34 @@
+﻿@model SklepMuzyczny.Models.Song
+@using SklepMuzyczny.Helpers;
+@{
+    ViewBag.Title = "Piosenka szczegóły";
+}
+
+
+<div class="row row-song">
+    @Html.Action("MenuVertical", "Song")
+    <div class="col-lg-9 col-md-9 " style="margin-left:0;">
+        <div class="music-details">
+            <div class="box-details-left">
+                <div class="picture-place-details">
+                    <img src="@Url.ImagePathGenerator(Model.NameFilePicture)" />
+                </div>
+            </div>
+            <div class="box-details-right">
+                <h3> Tytuł: <span class="text-center">@Model.NameSong</span></h3>
+                <h4>Autor: @Model.Author</h4>
+                <p>Kategoria: @Model.Category.NameCategory</p>
+                <p>Data dodania: @Model.DateAdded.Year</p>
+                <p class="label-description">@Model.Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id congue libero, sed semper felis. Phasellus luctus tristique lectus, nec sagittis odio ullamcorper nec. Nam quis purus vel lorem luctus vestibulum eu eget sapien. Sed sed justo lectus. Morbi pharetra enim molestie, pellentesque enim a, facilisis mauris. Vestibulum nec urna euismod, convallis neque non, malesuada leo. Vestibulum ut commodo neque. Vestibulum vitae viverra nulla, sit amet consequat odio.</p>
+            </div>
+            <div style="clear:both"></div>
+            <div class="box-details-center">
+                <h4 class="price-label-details">Cena @Model.Price zł</h4>
+                <a class="btn btn-block btn-success" href="@Url.Action("Add","Cart",new { songId = Model.SongId})">Dodaj do koszyka</a>
+                <a class="btn btn-block btn-primary" href="@Url.Action("BuyNow","Cart", new { songId = Model.SongId })">Kup teraz</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+

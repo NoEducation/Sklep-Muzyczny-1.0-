@@ -1,0 +1,126 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    line-height: 1.5;
+    overflow-x: hidden;
+    padding: 0px;
+}
+
+.v-header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    
+}
+
+.container-new {
+    max-width: 960px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+}
+
+.fullscreen-video-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+    .fullscreen-video-wrap video {
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+.header-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #21618C;
+    z-index: 1;
+    opacity: 0.65;
+}
+
+.header-content {
+    z-index: 2;
+}
+
+    .header-content h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    .header-content img {
+        width: 100px;
+        height: 125px;
+        border-radius: 3px;
+        z-index: 0;
+        opacity: 0.60;
+        
+    }
+    
+    .header-content p {
+        font-size: 1.5rem;
+        display: block;
+        padding-bottom: 2rem;
+       
+    }
+.image{
+    float:left;
+    margin-right:10px;
+    overflow: hidden;
+    
+}
+.description{
+    float:right;
+    max-width:825px;
+}
+.btn-new {
+    background: #34b320;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: ease-in-out 1.5s all;
+    text-decoration: none;
+    border: solid 1px #fff;
+}
+
+    .btn-new:hover {
+        background: #8E44AD;
+        color: #000000;
+        border: solid 1px #000;
+    }
+.footer-new {
+    background-color: #212F3C;
+    border-radius: 5px;
+    padding: 20px;
+}
+.footer-new ul {
+    margin: 0;
+    padding: 0;
+}
+
+    .footer-new ul li {
+        margin-left: 10px;
+        padding: 0;
+        display: inline-block;
+    }
+
+        .footer-new ul li a {
+            text-decoration: none;
+            transition: all 0.7s ease-in-out;
+        }
+
+            .footer-new ul li a:hover {
+                color: #2ECC71;
+            }

@@ -1,0 +1,66 @@
+﻿@model SklepMuzyczny.ViewModels.IndexCartViewModel
+@using SklepMuzyczny.Helpers
+@{
+    ViewBag.Title = "Koszy Podsumowanie";
+}
+<div class="cart-main-bar">
+    <h3>Koszyk - ilosc produktów: <span class="label label-success " >@Model.TotalQuantityItems</span></h3>
+</div>
+@if (Model.TotalQuantityItems <= 0)
+{
+    <h4 class="text-center bg-danger">Koszyk jest pusty</h4>
+    @Html.ActionLink("Wszystkie Piosenki", "SongsByCategory", "Song",
+    new { categoryName = SklepMuzyczny.Const.ConstValues.AllSongs},
+    new { @class = "btn btn-primary btn-foot btn-block btn-xs" })
+    
+}
+else
+{
+
+<table class="table table-striped table-hover table-bordered table-condensed">
+    <thead class="">
+    <tr class="info">
+        <th>Nazwa</th>
+        <th>Autor</th>
+        <th>Cena</th>
+        <th>Ilość</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody class="">
+        @foreach (var item in Model.CartItems)
+        {
+            <tr>
+                <td><img class="image-cart" src="@Url.ImagePathGenerator(item.Song.NameFilePicture)"/>
+                    <b>@item.Song.NameSong</b> 
+                </td>
+                <td><p class="text-cart">@item.Song.Author</p></td>
+                <td><p class="text-cart">@item.Song.Price zł</p></td>
+                <td><p class="text-cart">@item.Quantity</p></td>
+                <td>@Html.ActionLink("Usuń", "Remove", "Cart",new {songId= item.Song.SongId },
+                   new { @class ="btn btn-danger btn-cart center-block"})</td>
+            </tr>
+        }
+        <tr>
+            <td colspan="5" class=""><h5 class="pull-right text-total-value-cart">
+                Razem do zapłaty: @Model.TotalValue zł</h5>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr class="info">
+            <td colspan="5">
+                <div class="btn-group pull-right">
+                    @Html.ActionLink("Złóż zamówienie", "Payment", "Cart", null, new { @class = "btn btn-success btn-foot" })
+                    @Html.ActionLink("Wszystkie piosenki", "SongsByCategory", "Song",
+                        new { categoryName = SklepMuzyczny.Const.ConstValues.AllSongs},
+                        new { @class = "btn btn-primary btn-foot" })
+                </div>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+}
+
+ 
+

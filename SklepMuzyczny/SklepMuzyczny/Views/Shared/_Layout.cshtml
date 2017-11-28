@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico&amp;subset=latin-ext" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/Scripts/js")
+
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("Fajna Nuta", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("StaticSites","Home",new { id="AboutMe"})">O autorze</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+                @Html.Action("SummaryNavigation","Cart")
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <div class="informations-bar">
+            <h2><a href="@Url.Action("Index","Home")">Fajna Nuta - Sklep muzyczny</a></h2>
+</div>
+        <div class="sitemap-bar">
+            @Html.MvcSiteMap().SiteMapPath()
+        </div>
+        @RenderBody()
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li><a href="#">Szczególy</a></li>
+                    <li><a href="@Url.Action("StaticSites","Home",new { id="AboutMe"})">O Autorze</a></li>
+                    <li><a href="#">Regulamin</a></li>
+                    <li class="pull-right">&copy; Dominik Atrasik @DateTime.Now.Year</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    
+
+</body>
+</html>

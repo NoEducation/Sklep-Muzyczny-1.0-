@@ -1,0 +1,56 @@
+﻿@model  SklepMuzyczny.ViewModels.SongsByCategorySongViewModel
+@using SklepMuzyczny.Helpers
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Utwory według kategorii";
+}
+
+
+<div class="row row-song">
+    @Html.Action("MenuVertical","Song", new { categoryName = Model.ChoosenCategory})
+    <div class="col-lg-9 col-md-9 " style="margin-left:0;">
+        @foreach(var song in Model.Songs)
+        {
+            <div class="music-song">
+                <div class="box-left">
+                    <a class="picture-place-song" href="@Url.Action("SongDetails","Song",new { songId = song.SongId})">
+                        <img src="@Url.ImagePathGenerator(song.NameFilePicture)" />
+                    </a>
+                </div>
+                <div class="box-center">
+                    <a href="@Url.Action("SongDetails","Song",new { songId = song.SongId})"><h4>@song.NameSong</h4></a>
+                    <h6>@song.Author</h6>
+                    <h6>@song.Category.NameCategory</h6>
+                    <p>@song.Description</p>
+                </div>
+                <div class="box-right">
+                    <h4 class="price-label">@song.Price zł</h4>
+                    <div class="delivery-label">
+                        <p>Wysyłamy podukt w <span >24h</span></p>
+                    </div>
+                    <a class="btn btn-block btn-success" href="@Url.Action("Add","Cart",new { songId = song.SongId})">Dodaj do koszyka</a>
+                    <a class="btn btn-block btn-primary" href="@Url.Action("BuyNow","Cart", new { songId = song.SongId })">Kup teraz</a>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        }
+        @if (Model.Songs.PageCount > 1)
+        {
+         <div class="well well-sm">
+             <div class="">
+                 Strona @(Model.Songs.PageCount < Model.Songs.PageNumber ? 0 :
+                 Model.Songs.PageNumber) z @Model.Songs.PageCount
+             </div>
+             @Html.PagedListPager(Model.Songs, page => Url.Action("SongsByCategory", "Song",
+             new
+             {
+                 category = Model.ChoosenCategory
+                 ,
+                 page
+             }))
+             
+         </div>
+        }
+    
+    </div>
+</div>

@@ -1,0 +1,12 @@
+﻿@model string
+
+<div class="navbar-right">
+    <div class="navbar-text">
+        <p>Moj Koszyk</p>
+    </div>
+    <a class="btn btn-warning navbar-btn btn-navigation"
+        href="@Url.Action("Index","Cart")">
+        <span class="glyphicon glyphicon glyphicon-shopping-cart pull-left"></span>
+        <b class="pull-right"> @Model zł</b>
+    </a>
+</div>
