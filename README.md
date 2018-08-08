@@ -16,7 +16,7 @@ private void AddBindings()
    kernel.Bind<ISessionManager>().To<DefaultSessionManager>();
 }
 ```
-
+#### [Fajna nuta - link]()
 
 ## Licencja
 
