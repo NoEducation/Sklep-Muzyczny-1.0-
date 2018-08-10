@@ -16,6 +16,8 @@ private void AddBindings()
    kernel.Bind<ISessionManager>().To<DefaultSessionManager>();
 }
 ```
+## Wyglad
+![alt text](https://github.com/NoEducation/Sklep-Muzyczny-1.0-/blob/master/SklepMuzyczny/SklepMuzyczny/Content/img/mainIndexExample.png)
 #### [Fajna nuta - link]()
 
 ## Licencja
