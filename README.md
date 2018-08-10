@@ -20,10 +20,6 @@ private void AddBindings()
 ![alt text](https://github.com/NoEducation/Sklep-Muzyczny-1.0-/blob/master/SklepMuzyczny/SklepMuzyczny/Content/img/mainIndexExample.png)
 #### [Fajna nuta - link]()
 
-## Licencja
-
-This project is released under the MIT Licence. See the bundled LICENSE file for details.
-
 ## Autor
 
 Dominik Atrasik
