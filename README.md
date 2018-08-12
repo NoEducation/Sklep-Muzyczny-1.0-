@@ -1,9 +1,5 @@
-# Sklep muzyczny "Fajna Nuta"
-Siemka
-repozytorium na które właśnie patrzysz zostało napisane w jezyku C# z wykorzystaniem framework'u ASP.NET MVC 5. Przedstawia aplikację
-internetową "Fajna Nuta" pozwalająca na zakup piosenek (aplikacja nie jest ukończona). Przy tworzeniu sklepu muzycznego 
-strałem się użyć najnowszych wzorców i technolgi takich jak: testy jednostkowe,mechanizm migracji kontener DI Ninjec (patrzy dół)
-i wiele innych
+# Music  store  „Fajna Nuta”
+Hello ,the repository you are just looking right now  has been written in C # using the ASP.NET MVC 5  framework. Repository show  internet applications “ Fajna Nuta” which provide opportunity to buy songs (website isn’t finished ). When I was developed  music store I try to use design patterns, unity tests, migration mechanism, dependency injection (look down)  and many more
 
 
 ```c#
@@ -16,10 +12,10 @@ private void AddBindings()
    kernel.Bind<ISessionManager>().To<DefaultSessionManager>();
 }
 ```
-## Wyglad
+## Appearance
 ![alt text](https://github.com/NoEducation/Sklep-Muzyczny-1.0-/blob/master/SklepMuzyczny/SklepMuzyczny/Content/img/mainIndexExample.png)
 #### [Fajna nuta - link]()
 
-## Autor
+## Author
 
 Dominik Atrasik
