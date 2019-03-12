@@ -14,7 +14,7 @@ private void AddBindings()
 ```
 ## Appearance
 ![alt text](https://github.com/NoEducation/Sklep-Muzyczny-1.0-/blob/master/SklepMuzyczny/SklepMuzyczny/Content/img/mainIndexExample.png)
-### [https://sklepmuzyczny.azurewebsites.net]()
+## [FAJNA NUTA - CLICK](https://sklepmuzyczny.azurewebsites.net)
  There is some issues with appearance of published website which I try to resolve.
  
 
