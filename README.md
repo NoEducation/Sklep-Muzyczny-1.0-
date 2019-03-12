@@ -14,7 +14,7 @@ private void AddBindings()
 ```
 ## Appearance
 ![alt text](https://github.com/NoEducation/Sklep-Muzyczny-1.0-/blob/master/SklepMuzyczny/SklepMuzyczny/Content/img/mainIndexExample.png)
-#### [Fajna nuta - link]()
+#### [https://sklepmuzyczny.azurewebsites.net/]()
 
 ## Author
 
