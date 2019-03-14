@@ -11,8 +11,8 @@ namespace SklepMuzyczny.Infrastructure
     {
         private MailMessage mail;
         private SmtpClient smptClient;
-        private const string EmailAddressSender = "mistrzowymistrz@gmail.com";
-        private const string PasswordSender = "heros888";
+        private const string EmailAddressSender = "*"; // enter you message box , preconfigured gmail
+        private const string PasswordSender = "*"; // enter you password
 
         public EmailSender()
         {

@@ -25,6 +25,9 @@ namespace SklepMuzyczny.Infrastructure
         {
             return kernel.GetAll(serviceType);
         }
+        /// <summary>
+        /// Setting bindings with using Niniject
+        /// </summary>
         private void AddBindings()
         {
             kernel.Bind<ISongRepository>().To<DefaultSongRepository>();

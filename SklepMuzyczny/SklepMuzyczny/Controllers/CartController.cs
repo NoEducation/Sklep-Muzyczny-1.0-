@@ -59,7 +59,7 @@ namespace SklepMuzyczny.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Payment(PaymetCartViewModel orderDetails)
         {
-            EmailSender emailSender = new EmailSender();
+            //EmailSender emailSender = new EmailSender();
             if (!ModelState.IsValid)
             {   
                 orderDetails.SongsOrdered = manager.TakeCartFromSession();
@@ -68,8 +68,8 @@ namespace SklepMuzyczny.Controllers
                 return View(orderDetails);
             }
             var orderCreated = manager.CreatedOrder(orderDetails.Orders);
-            emailSender.SendEmailToCustomer(orderCreated);
-            emailSender.SendEmailToAdmin(orderCreated);
+            //emailSender.SendEmailToCustomer(orderCreated);
+            //emailSender.SendEmailToAdmin(orderCreated);
             manager.Clear();
             return RedirectToAction("Thanks");
         }
