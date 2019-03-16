@@ -164,6 +164,7 @@
     <Content Include="Content\bootstrap1.css" />
     <Content Include="Content\ErrorStyle.css" />
     <Content Include="Content\img\diamonds.jpg" />
+    <Content Include="Content\img\falseImage.png" />
     <Content Include="Content\img\halfdead.jpg" />
     <Content Include="Content\img\heyyou.jpg" />
     <Content Include="Content\img\intheend.jpg" />

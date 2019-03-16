@@ -21,7 +21,7 @@ namespace SklepMuzyczny.DAT
         }
         
         public virtual DbSet<Song> Songs { get; set; }
-        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Category> Categories { get; set; } 
         public virtual DbSet<Order> Orders { get; set; }
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

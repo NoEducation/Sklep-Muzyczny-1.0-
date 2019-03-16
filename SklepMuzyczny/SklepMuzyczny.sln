@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SklepMuzyczny", "SklepMuzyczny\SklepMuzyczny.csproj", "{4342EEBF-7D34-42F8-BE5B-5B2C715DE437}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SklepMuzyczny.Testss", "SklepMuzyczny.Testss\SklepMuzyczny.Testss.csproj", "{613C23C5-8C0C-46CD-A8DF-9D82C55DF99F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SklepMuzyczny.Tests", "SklepMuzyczny.Testss\SklepMuzyczny.Tests.csproj", "{613C23C5-8C0C-46CD-A8DF-9D82C55DF99F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

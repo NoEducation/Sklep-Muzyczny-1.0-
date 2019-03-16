@@ -13,7 +13,13 @@ namespace SklepMuzyczny.Helpers
     {
         public static string ImagePathGenerator(this UrlHelper helper,string ImageName)
         {
-            var path = Path.Combine(AppConfing.ImageFolderPath, ImageName);
+
+            string path;
+ 
+            if(ImageName == null)
+                path = Path.Combine(AppConfing.ImageFolderPath, AppConfing.NameMissingImage);
+            else
+                path = Path.Combine(AppConfing.ImageFolderPath, ImageName);
             var resultPath = helper.Content(path);
             return resultPath;
         }
