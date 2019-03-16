@@ -15,15 +15,15 @@
 
 </head>
 <body>
-    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top ">
         <div class="container">
             <div class="navbar-header">
                 @Html.ActionLink("Fajna Nuta", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="@Url.Action("StaticSites","Home",new { id="AboutMe"})">O autorze</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="@Url.Action("StaticSites","Home",new { id="AboutMe"})"><span class="glyphicon glyphicon-user button-header-margin"></span>O autorze</a></li>
+                    <li><a href="@Url.Action("StaticSites","Home",new { id="Contact"})"><span class="glyphicon glyphicon-envelope pull-left button-header-margin"></span>Kontakt</a></li>
                 </ul>
                 @Html.Action("SummaryNavigation","Cart")
             </div>

@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta name="description" content="Strona opisuje autora aplikacji oraz sposób jej działania" />
+    <meta name="author" content="Dominik Atrasik" />
+    <meta name="keywords" content="opis o mnie dominik atrasik kontakt repozytoriu" />
+    <title>@ViewBag.Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico&amp;subset=latin-ext" rel="stylesheet" />
+    @Styles.Render("~/Content/secondLayoutStyle")
+    @Scripts.Render("~/Scripts/js")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top ">
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("Fajna Nuta", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("StaticSites","Home",new { id="AboutMe"})"><span class="glyphicon glyphicon-user button-header-margin"></span>O autorze</a></li>
+                    <li><a href="@Url.Action("StaticSites","Home",new { id="Contact"})"><span class="glyphicon glyphicon-envelope pull-left button-header-margin"></span> Kontakt</a></li>
+                </ul>
+                <div class="navbar-right">
+                    <a class="btn btn-danger navbar-btn btn-navigation disabled"
+                       href="#">
+                        <span class="glyphicon glyphicon-fire pull-left button-header-margin"></span>
+                        <i>Administracja strony  </i>
+                    </a>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+
+    @RenderBody()
+</body>
+</html>

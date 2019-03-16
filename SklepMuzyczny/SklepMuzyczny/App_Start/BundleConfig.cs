@@ -17,6 +17,14 @@ namespace SklepMuzyczny.App_Start
                 "~/Content/FontStyles.css"
                 ));
            
+            bundles.Add(new StyleBundle("~/Content/secondLayoutStyle")
+                .Include("~/Content/AboutMeStyles.css",
+                "~/Content/bootstrap.css",
+                "~/Content/ErrorStyle.css",
+                "~/Content/FontStyles.css",
+                "~/Content/secondStyle.css"
+                ));
+
             bundles.Add(new ScriptBundle("~/Scripts/js")
                 .Include("~/Scripts/jquery-{version}.min.js",
                 "~/Scripts/bootstrap.min.js",
