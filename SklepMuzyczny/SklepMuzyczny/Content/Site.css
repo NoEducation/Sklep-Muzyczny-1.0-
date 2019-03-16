@@ -116,8 +116,9 @@ body {
 
     }
 .music-offer {
-    background-color: #212F3C;
+    background-color: #eaecee;
     text-align: center;
+    border-radius: 5px;
     border-radius: 5px;
 }
 #newest-music-headline {
@@ -177,7 +178,6 @@ body {
     width: 100%;
     margin-right: 0;
     max-height: 240px;
-    background-color: #212F3C;
     margin-bottom: 10px;
     border-radius: 5px;
 }
@@ -197,20 +197,20 @@ body {
 .box-left {
     float: left;
     padding: 20px 20px 20px 20px;
-    background-color: #1C2833;
-    border-top-left-radius:5px;
+    background-color: #2e86c1;
+    border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-.box-center{
-    float:left;
-    padding:20px;
-    text-align:justify;
-    width:300px;
-
-    min-height:240px;
+.box-center {
+    float: left;
+    padding: 20px;
+    text-align: justify;
+    width: 300px;
+    background-color: #eaecee;
+    min-height: 240px;
 }
 .box-center a{
-    color:#fff;
+    color:#7D3C98;
     text-decoration:none;
 }
 .box-center a:hover{
@@ -222,7 +222,7 @@ body {
 }
 .box-right {
     float: left;
-    background-color: #1C2833;
+    background-color: #2e86c1;
     width: 296.2px;
     padding: 20px;
     border-top-right-radius: 5px;
@@ -230,7 +230,7 @@ body {
     border-bottom-right-radius: 5px;
 }
 .price-label {
-    background-color: #212F3D;
+    background-color: #fff;
     width: 100%;
     text-align: center;
     padding: 5px;
@@ -239,7 +239,7 @@ body {
 }
 .delivery-label {
     width: 100%;
-    background-color: #212F3D;
+    background-color: #fff;
     text-align: center;
     padding: 5px;
     border-radius: 3px;
@@ -247,20 +247,20 @@ body {
 }
 
 .music-details {
-    background-color: #212F3C;
+    background-color: #eaecee;
     min-height: 400px;
     border-radius: 5px;
 }
 .box-details-left {
     float:left;
     padding: 20px;
-    background-color: #1C2833;
+    background-color: #fff;
     width: 340px;
     border-top-left-radius: 5px;
     
 }
 .box-details-right {
-    background-color: #17202A;
+    background-color: #fff;
     border-top-right-radius: 5px;
     padding: 20px 20px 3px 20px;
     float: left;
@@ -281,13 +281,13 @@ body {
     }
 .label-description {
     width: 100%;
-    background-color: #212F3C;
+    background-color: #fff;
     border-radius:3px;
     padding: 5px;
     min-height:50px;
 }
 .price-label-details {
-    background-color: #212F3D;
+    background-color: #fff;
     width: 100%;
     text-align: center;
     font-size: 34px;
